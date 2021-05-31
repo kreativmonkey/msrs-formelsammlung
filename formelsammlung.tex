@@ -1,0 +1,40 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[a4paper, left=3cm, right=2cm, top=2cm]{geometry}
+\usepackage[utf8]{inputenc}					% Zeichenkodierung UTF-8 falls Probleme wegen utf8 auftreten, utf8 durch utf8x ersetzen
+\usepackage[ngerman]{babel}					% Deutsche Sprache und Silbentrennung
+\usepackage{xcolor}
+\usepackage{amsmath}						% erlaubt mathematische Formeln
+\usepackage{amssymb}						% Verschiedene Symbole
+\usepackage{graphicx}						% Zum Bilder einfügen benötigt
+\usepackage{hyperref}						% Sprunglinks für Überschriften, Fußnoten und Weblinks
+\usepackage{tabularx}
+\usepackage{siunitx}                        % Zur Darstellung von SI Einheiten
+\sisetup{
+  locale = DE ,
+  per-mode = symbol
+}
+\usepackage{multicol}                       % Mehrspaltig
+
+\usepackage{parskip}                        % No Space after newline
+
+\newcommand\mainformular[1]{\fbox{#1}}      % Standard Formel
+\newcommand\legende[1]{
+    \colorbox{lightblue}{%
+    \begin{tabularx}{\textwidth}{llll}
+     #1
+    \end{tabularx}
+    }
+}                                           % Farbig hintelegte Legende
+\definecolor{lightblue}{RGB}{204, 230, 255}
+
+\begin{document}
+
+\section{Messtechnik}
+
+\subsection{Grundlagen Drehspulmesser}
+\input{themen/drehspulmesser.tex}
+
+\subsection{Grundlagen DVN}
+\input{themen/dvn.tex}
+
+\end{document}

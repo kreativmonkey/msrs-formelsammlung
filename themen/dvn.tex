@@ -1,0 +1,79 @@
+\subsubsection{DVN Genauigkeit Bit}
+\begin{minipage}{0.45\textwidth}
+\mainformular{ $B(n) = \cfrac{\log(2\cdot 10^n)}{\log(2)}$}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\legende{
+$n$ & Stellen der Anzeige & $\mathbb{N}$ & \\
+}
+\end{minipage}
+
+\subsubsection{DVN Genauigkeit \%} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $e_r= \cfrac{1}{2 \cdot 10^n - 1}$} \\
+$e_r= \cfrac{1}{2^{B(n)} - 1}$
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+ 
+\legende{ 
+$n$ & Stellen der Anzeige & $\mathbb{N}$ &  \\ 
+ \\ 
+} 
+\end{minipage} 
+
+\subsubsection{Anzeigen Auflösung} 
+
+Bestimmung durch den Kehrwert der Anzeige. Beispiel für $3\frac{1}{2}$ 
+
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $0.5 \cdot 10^{-3}$} \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+\end{minipage} 
+
+\subsubsection{Spannung pro Digit} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $I_{Dig} = I \cdot n$} \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+ 
+\legende{ 
+$n$ & Kehrwert der Anzeige &  &  \\ 
+$Mess_{max}$ & Max Wert Messbereich &  & \\
+} 
+\end{minipage} 
+
+\subsubsection{Rückwirkungsfehler} 
+Dieser ist größer als bei Analogen Messverfahren denn $R_P \ge R_M$.
+
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $F_I = \cfrac{I_M - I_0}{I_0} = -\cfrac{R_P}{R_0 + R_L + R_P}$ } \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+ 
+\legende{ 
+$F_I$ & systemischer Fehler & & \\
+$I_0$ & &  \si{\ampere} & \\
+$I_M$ & &  \si{\ampere} & \\
+$R_0$ & &  \si{\ohm} & \\
+$R_L$ & Lastwiderstand & \si{\ohm} & \\
+$R_P$ & & \si{\ohm}  & \\
+} 
+\end{minipage}
+
+\subsubsection{Rückwirkungsfehler Spannungsmessung} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $F_U = \cfrac{\cfrac{R_i R_P}{R_i + R_P}-R_P}{R_P} = -\cfrac{R_P}{R_i + R_P}$ } \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+ 
+\legende{ 
+$F_U$ & systemischer Fehler & & \\
+$U_0$ & &  \si{\volt} & \\
+$U_M$ & &  \si{\volt} & \\
+$R_0$ & &  \si{\ohm} & \\
+$R_i$ &  & \si{\ohm} & \\
+$R_M$ & Spulenwiederstand (Kupfer*) & \si{\ohm}  & \\
+$R_V$ & Vorwiderstand & \si{\ohm} & \\
+} 
+\end{minipage}

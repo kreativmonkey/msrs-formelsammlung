@@ -1,0 +1,128 @@
+\subsubsection{Windungen im Wickelraum}
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $A_W = N \cdot d^2$} \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+ 
+\legende{ 
+$A_W$ & Wickelraum & & \\
+$N$ & Anzahl der Windungen &  & \\
+$d^2$ & Drahtdurchmesser & \si{\square\metre} & \\
+} 
+\end{minipage}
+
+\subsubsection{Elektrisches Moment} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $M_{el}= A \cdot N \cdot B \cdot I$} \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+ 
+\legende{ 
+$N$ & Anzahl der Windungen &  & \\
+$I$ & Stromstärke & \si{\ampere} & \\
+$A$ & Fläche & \si{\square\metre}  & \\
+$B$ & Feldstärke & \si{\tesla} & \\
+} 
+\end{minipage}
+
+\subsubsection{Mechanisches Moment} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $M_{mech}= \alpha \cdot D$} \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+\legende{ 
+$D$ & Federkonstante & $\si{\newton\metre}/90\si{\degree}$ & \\
+$\alpha$ & Ausschlagwinkel & \si{\degree} & \\
+} 
+\end{minipage}
+
+\subsubsection{Zeigerausschlag}
+\begin{minipage}{0.45\textwidth}
+\mainformular{ $\alpha = I \cdot \cfrac{A\cdot N\cdot B}{D}$}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\legende{
+$N$ & Anzahl der Windungen &  & \\
+$I$ & Stromstärke & \si{\ampere} & \\
+$A$ & Fläche & \si{\square\metre}  & \\
+$D$ & Federkonstante & \si{\newton\metre} & \\
+}
+\end{minipage}
+
+\subsubsection{Strommessung mit Nebenwiderstand}
+\begin{minipage}{0.45\textwidth}
+\mainformular{ $(I-I_M) R_N= I_M(R_M+R_V)$ }\\
+$R_N = \cfrac{I_M(R_M+R_V)}{I-I_M} $
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\legende{
+$I_M$ & Messwerkstrom & \si{\ampere} &  \\
+& 1\si{\milli\ampere} oder 100\si{\micro\ampere} & & \\
+$I$ & Stromstärke & \si{\ampere} & \\
+$R_M$ & Spulenwiederstand (Kupfer*) & \si{\ohm}  & \\
+$R_N$ &  & \si{\ohm} & \\
+$R_V$ &  & \si{\ohm} & \\
+}
+*Temperaturkoeffizient Kupfer: $4\%/10\si{\kelvin}$
+\end{minipage}
+
+
+\subsubsection{Güteklasse mit Temperaturkoeffizient} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $G = \cfrac{R_M}{R_M+R_V}\cdot 4\%/10 \si{\kelvin}$ } \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth} 
+ 
+\legende{ 
+$G$ & Güteklasse & & \\
+$R_M$ & Spulenwiederstand (Kupfer*) & \si{\ohm}  & \\
+$R_N$ &  & \si{\ohm} & \\
+$R_V$ &  & \si{\ohm} & \\
+} 
+\end{minipage}
+
+\subsubsection{Rückwirkungsfehler Strommessung} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $F_I = \cfrac{I_M - I_0}{I_0} = -\cfrac{R_M}{R_0 + R_L + R_M}$ } \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth}  
+\legende{ 
+$F_I$ & systemischer Fehler & & \\
+$I_0$ & &  \si{\ampere} & \\
+$I_M$ & &  \si{\ampere} & \\
+$R_0$ & &  \si{\ohm} & \\
+$R_L$ & Lastwiderstand & \si{\ohm} & \\
+$R_M$ & Spulenwiederstand (Kupfer*) & \si{\ohm}  & \\
+} 
+\end{minipage}
+
+\subsubsection{Spannungsmesser} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $R_V = \cfrac{U}{I_M} - R_M$ } \\
+\end{minipage} 
+\begin{minipage}{0.45\textwidth}  
+\legende{ 
+$I_M$ & &  \si{\ampere} & \\
+$R_M$ & Spulenwiederstand (Kupfer*) & \si{\ohm}  & \\
+$R_V$ & Vorwiderstand & \si{\ohm} & \\
+$U$ & Spannung & \si{\volt} & \\
+} 
+\end{minipage}
+
+\subsubsection{Rückwirkungsfehler Spannungsmessung} 
+\begin{minipage}{0.45\textwidth} 
+\mainformular{ $F_U = \cfrac{U_M - U_0}{U_0} = -\cfrac{R_0}{R_0 + R_i}$ } \\
+$U_M = \cfrac{U_0}{R_0+R_i}R_i$ \\
+$R_i = R_M + R_V$
+\end{minipage} 
+\begin{minipage}{0.45\textwidth}  
+\legende{ 
+$F_U$ & systemischer Fehler & & \\
+$U_0$ & &  \si{\volt} & \\
+$U_M$ & &  \si{\volt} & \\
+$R_0$ & &  \si{\ohm} & \\
+$R_i$ & & \si{\ohm} & \\
+$R_M$ & Spulenwiederstand (Kupfer*) & \si{\ohm}  & \\
+$R_V$ & Vorwiderstand & \si{\ohm} & \\
+} 
+\end{minipage}
