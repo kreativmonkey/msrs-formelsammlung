@@ -1,0 +1,74 @@
+\begin{minipage}{0.45\textwidth}
+$F_z(p) = \frac{x(p)}{Z(p)} = \frac{-F_s}{1+F_o} = 0$ \\
+ $F_W(p) = \frac{x(p)}{w(p)} = \frac{F_o}{1+F_o} = 1$ \\
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$F_z(p)$ & ideales Störverhalten  & & \\
+$F_W(p)$ & ideales Führungsverhalten &  & \\
+}
+\end{minipage}
+
+\subsubsection{Bleibende Regelabweichung Führungsverhalten}
+\begin{minipage}{0.45\textwidth}
+\mainformular{ $R_{1W} = \lim \limits_{p \rightarrow 0} \frac{1}{1+F_o(p)}$} \\
+$R_{1WP} = \frac{1}{1+V_o}$ \\
+ $R_{1WI} = 0$ \\
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$R_{1W}$ & bleibende Regelabweichung  & & \\
+& Führungsverhalten allgemein & & \\
+$R_{1WP}$ & P-Regelkreis (ohne I-Glied) & & \\
+$R_{1WI}$ & I-Regelkreis  & & \\
+
+}
+\end{minipage}
+
+\subsubsection{Bleibende Regelabweichung Störverhalten}
+\begin{minipage}{0.45\textwidth}
+\mainformular{ $R_{1Z} = \lim \limits_{p \to 0} \frac{F_s(p)}{1+F_o(p)}$} \\
+ $R_{1ZP} = \lim \limits_{p \to 0} \frac{F_s}{1+F_RF_S} = \frac{V_S}{1+V_RV_S} \approx \frac{1}{V_R}$ \\
+$R_{1ZIS} = \lim \limits_{p \to 0} \frac{1}{pT_{IS}+ V_R} = \frac{1}{V_R}$ \\
+
+\mainformular{ $R_{1ZIR} = \lim \limits_{p \to 0} \frac{pT_{IR}* V_S}{pT_{IR}+ V_S} = 0$} \\
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$R_{1Z}$ & bleibende Regelabweichung  & & \\
+& Störverhalten allgemein & & \\
+$R_{1ZP}$ & P-Regelkreis (ohne I-Glied)  &  & \\
+& für $V_RV_S >> 1$ & & \\
+$R_{1ZIS}$ & I-Regelkreis, Strecke mit I-Glied  & & \\
+$R_{1ZIR}$ & I-Regelkreis, Strecke ohne I-Glied  & & \\
+
+}
+\end{minipage}
+
+\subsubsection{Geschwindigkeitsfehler}
+Führungsgröße als Rampenfunktion \\
+$ w(t) = a\cdot t \Rightarrow w(p) = \frac{a}{p^2}$\\
+
+\begin{minipage}{0.45\textwidth}
+\mainformular{ $R_{2} = \lim \limits_{p \to 0} p \cdot w(p) \frac{1}{1+F_o(p)}= 
+\lim \limits_{p \to 0}  \frac{a}{p} \cdot \frac{1}{1+F_o(p)}$}  \\
+$R_{2P} = \lim \limits_{p \to 0}  \frac{a}{p} \cdot \frac{1}{1+V_o}= \infty$\\
+$ R_{2I} = \frac{aT_o}{V_o}$\\
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$R_{2}$ & Geschwindigkeitsfehler  & & \\
+&  allgemein & & \\
+$R_{2P}$ & P-Regelkreis (ohne I-Glied)  &  & \\
+$R_{2I}$ & I-Regelkreis  & & \\
+
+}
+\end{minipage}

@@ -1,0 +1,58 @@
+Es gilt:
+
+\begin{minipage}{0.45\textwidth}
+
+\mainformular{ $F_G = \frac{F_o}{1 + F_o}$} \\
+\mainformular{ $F_G = \frac{Z_o}{Z_o + N_o}$} \\
+\mainformular{ $F_o = F_R \cdot F_S$} \\
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$F_G$ & geschlossener Kreis  & & \\
+$Z_o$ & Zähler offener Kreis  & & \\
+$N_o$ & Nenner offener Kreis  & & \\
+$F_o$ & offener Kreis  & & \\
+$F_G$ & geschlossener Kreis  & & \\
+
+}
+\end{minipage}
+
+\subsubsection{Hurwitz-Kriterium}
+charakteristische Gleichung des geschl. Regelkreises:
+$$ a_mp^m + a_{m-1}p^{m-1}+ ... + a_1p+ a_0 = 0$$
+
+notwendige Bedingung: alle Koeffizienten der charakteristischen Gleichung des geschlossenen Regelkreises müssen vorhanden und positives Vorzeichen haben. \\
+
+hinreichende Bedingung: Alle Hauptabschnitssdeterminanten $D_i$
+der Hurwitzdeterminantte H müssen positiven Wert haben.\\
+
+\begin{minipage}{0.45\textwidth}
+
+\mainformular{ $D_2 = a_1\cdot a_2 - a_3 \cdot a_0$} \\
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$D_2$ & Determinante rel. für System 3.Ord.  & & \\
+
+}
+\end{minipage}
+
+\subsubsection{Niquist-Kriterium}
+Der geschlossene Regelkreis ist stabil, wenn der kritische Punkt (-1,0) links der Ortskurve $F_o(j\omega)$ seines offenen Kreises liegt.
+
+\begin{minipage}{0.45\textwidth}
+
+\mainformular{ $F_o(j\omega) = \frac{K}{A(j\omega)+ j B(j\omega)}$} \\
+$\omega_k \Rightarrow B(\omega) = 0$ \\
+$\frac{K}{A(\omega_k)} > -1 $
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$F_o(j\omega)$ & Übertragungsfkt. offenen Kreis  & & \\
+& Berechnungen zum Prüfen d. Stabilität & & \\
+}
+\end{minipage}
