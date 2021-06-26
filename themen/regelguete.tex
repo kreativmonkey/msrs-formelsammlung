@@ -56,7 +56,7 @@ Führungsgröße als Rampenfunktion \\
 $ w(t) = a\cdot t \Rightarrow w(p) = \frac{a}{p^2}$\\
 
 \begin{minipage}{0.45\textwidth}
-\mainformular{ $R_{2} = \lim \limits_{p \to 0} p \cdot w(p) \frac{1}{1+F_o(p)}= 
+\mainformular{ $R_{2} = \lim \limits_{p \to 0} p \cdot w(p) \frac{1}{1+F_o(p)}=
 \lim \limits_{p \to 0}  \frac{a}{p} \cdot \frac{1}{1+F_o(p)}$}  \\
 $R_{2P} = \lim \limits_{p \to 0}  \frac{a}{p} \cdot \frac{1}{1+V_o}= \infty$\\
 $ R_{2I} = \frac{aT_o}{V_o}$\\
@@ -70,5 +70,36 @@ $R_{2}$ & Geschwindigkeitsfehler  & & \\
 $R_{2P}$ & P-Regelkreis (ohne I-Glied)  &  & \\
 $R_{2I}$ & I-Regelkreis  & & \\
 
+}
+\end{minipage}
+\newpage
+\subsubsection{Integralkriterien}
+Um die Regelgüte zu bestimmen wird aus der Sprungantwort berechnet\\
+
+
+\begin{minipage}{0.45\textwidth}
+\mainformular{ $R_{2} = \lim \limits_{p \to 0} p \cdot w(p) \frac{1}{1+F_o(p)}=
+\lim \limits_{p \to 0}  \frac{a}{p} \cdot \frac{1}{1+F_o(p)}$}  \\
+
+$IE = \int_{0}^{\infty}(x_{\infty})-x(t))dt = \int_{0}^{\infty} \Delta xdt $\\
+$IAE = \int_{0}^{\infty}  | x_{\infty}-x(t) | dt $\\
+$ ISE = \int_{0}^{\infty} (x_{\infty}-x(t))^2dt = \int_{0}^{\infty}(e(t))^2 dt  $\\
+
+$ ISE_1 = \frac{c_0^2}{2d_0d_1}$\\
+$ ISE_2 = \frac{c_1^2d_0+c_0^2d_2}{2d_0d_1d_2}$ \\
+$ ISE_3 = \frac{c_2^2d_0d_1+c_0^2d_2d_3+(c_1^2-2c_0c_2)d_0d_3}{2d_0d_3(d_1d_2-d_0d_3)}$\\
+
+$ ITAE =  \int_{0}^{\infty}t |\Delta x|dt $\\
+$ ITSE =  \int_{0}^{\infty}t (\Delta x)^2dt $\\
+
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$IE$ & lineare Regelfläche   & & \\
+$IAE$ & betragslineare Regelfläche   &  & \\
+$ISE$ & quadratische Regelfläche  & & \\
+$ITAE$ & zeitbewertete   &  & \\
+$ITSE$ & zeitbewertete  & & \\
 }
 \end{minipage}
