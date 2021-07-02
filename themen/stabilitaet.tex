@@ -40,6 +40,71 @@ $D_2$ & Determinante rel. für System 3.Ord.  & & \\
 }
 \end{minipage}
 
+\subsubsection{Allgemeine Lösung Hurwitz-Kriterium für Systeme 3. Ortnung}
+
+\begin{minipage}{.45\textwidth}
+ \begin{equation} \label{Fstrecke}
+  F_S(p) = \cfrac{V_S}{(T_1p+1)T_0p} 
+\end{equation}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\begin{equation} \label{Fregler}
+  F_R(p) = \cfrac{V_R}{T_Rp+1} 
+\end{equation}
+\end{minipage}
+
+\begin{equation} \label{eq1}
+\begin{split}
+ F_0(p) &= F_S(p) \cdot F_R(p) \\
+ &=  \cfrac{V_S}{(T_1p+1)T_0p} \cdot \cfrac{V_R}{T_Rp+1} \\
+ &= \cfrac{V_S\cdot V_R}{((T_1p+1)T_0p) \cdot (T_Rp+1)} \\
+ &= \cfrac{V_S\cdot V_R}{(T_0T_1p^2+T_0p) \cdot (T_Rp+1)} \\
+ &= \cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p} \\
+\end{split}
+\end{equation}
+\begin{equation} \label{eq1}
+\begin{split}
+ G_W(p) &=  \cfrac{F_0(p)}{1+F_0(p)} \\
+ &= \cfrac{\cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}}{1+\cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}} \\
+ &= \cfrac{\cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}}{1+\cfrac{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p+V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}} \\
+ &= \cfrac{V_S\cdot V_R}{p^3(T_0T_1T_R)+p^2(T_0T_R+T_0T_1)+p(T_0)+V_SV_R}
+\end{split}
+\end{equation}
+
+Eine notwendige Bedingung die erfüllt sein muss lautet: Alle $a_i$ sind vorhanden und $a_i > 0$. Dies ist im gezeigten Beispiel gegeben.
+
+
+\begin{equation} \label{eg3}
+\begin{split}
+ G_W(p) &=  \cfrac{F_0(p)}{1+F_0(p)} \\
+ &= \cfrac{\cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}}{1+\cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}} \\
+ &= \cfrac{\cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}}{1+\cfrac{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p+V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p}} \\
+ &= \cfrac{V_S\cdot V_R}{p^3(T_0T_1T_R)+p^2(T_0T_R+T_0T_1)+p(T_0)+V_SV_R}
+\end{split}
+\end{equation}
+
+Bei Systemen 3. Ortnung, welche die notwendigen Bedingungen erfüllen folgt die Berechnungen von $D_2$ nach:
+
+\begin{equation} \label{eg3}
+ \begin{split}
+ D_2 &= a_1a_2-a_0a_3 \\
+ &= T_0 \cdot T_0(T_1+T_R) - V_SV_R \cdot T_0T_1T_R \\
+ &= T_0^2 (T_1+T_R) - V_SV_RT_0T_1T_R 
+\end{split}
+\end{equation}
+
+Die Bedingung zur Erfüllung des Hurwitz-Kriteriums lautet $T_0^2 (T_1+T_R) - V_SV_RT_0T_1T_R  > 0$. Auflösung nach $T_R$:
+
+\begin{equation} \label{eg3}
+ \begin{split}
+ T_0^2T_1+T_0^2T_R - V_SV_RT_0T_1T_R  &> 0 \\
+ T_0^2T_1   &> V_SV_RT_0T_1T_R - T_0^2T_R\\
+ T_0^2T_1  &> T_R(V_SV_RT_0T_1 - T_0^2) \\
+ \cfrac{T_0^2T_1}{V_SV_RT_0T_1 - T_0^2} &> T_R \\
+ \cfrac{T_0T_1}{V_SV_RT_1 - T_0} &> T_R
+\end{split}
+\end{equation}
+
 \subsubsection{Niquist-Kriterium}
 Der geschlossene Regelkreis ist stabil, wenn der kritische Punkt (-1,0) links der Ortskurve $F_o(j\omega)$ seines offenen Kreises liegt.
 
@@ -56,3 +121,115 @@ $F_o(j\omega)$ & Übertragungsfkt. offenen Kreis  & & \\
 & Berechnungen zum Prüfen d. Stabilität & & \\
 }
 \end{minipage}
+
+\subsubsection{Allgemeines Niquist-Kriterium}
+
+Formale Voraussetzung:
+
+\begin{itemize}
+ \item Totzeit $T_z \ge 0$ (Wenn nicht vorhanden ist dieses Kriterium gegeben.)
+ \item $F_0(s)$: Zählergrad $<$ Nennergrad
+\end{itemize}
+
+Der geschlossene Regelkreis ist stabil, wenn die Winkeländerung der Ortskurve von -1 aus betrachtet folgender Winkeländerung entspricht:
+
+\begin{minipage}{0.45\textwidth}
+
+\mainformular{ $W = \pi \left( r_0 + \cfrac{a_0}{2} \right)$} \\
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+
+\legende{
+$W$ & Winkeländerung  & & \\
+$r_0$ & Anzahl reeler Pole mit pos. Realteil & & \\
+$a_0$ & Anzahl Pole auf der j-Achse & & \\
+}
+\end{minipage}
+
+\subsubsection{Allgemeine Lösung 3. Ortnung}
+
+\begin{minipage}{.45\textwidth}
+ \begin{equation} \label{Fstrecke}
+  F_S(p) = \cfrac{V_S}{(T_1p+1)T_0p} 
+\end{equation}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\begin{equation} \label{Fregler}
+  F_R(p) = \cfrac{V_R}{T_Rp+1} 
+\end{equation}
+\end{minipage}
+
+\begin{equation} \label{eg1}
+\begin{split}
+ F_0(p) &= F_S(p) \cdot F_R(p) \\
+ &=  \cfrac{V_S}{(T_1p+1)T_0p} \cdot \cfrac{V_R}{T_Rp+1} \\
+ &= \cfrac{V_S\cdot V_R}{((T_1p+1)T_0p) \cdot (T_Rp+1)} \\
+ &= \cfrac{V_S\cdot V_R}{(T_0T_1p^2+T_0p) \cdot (T_Rp+1)} \\
+ &= \cfrac{V_S\cdot V_R}{T_0T_1T_Rp^3+T_0T_Rp^2+T_0T_1p^2+T_0p} \\
+ &= \cfrac{V_S\cdot V_R}{p^2(T_0T_1T_Rp+T_0T_R+T_0T_1+\frac{T_0}{p})} \\
+ \end{split}
+\end{equation}
+
+\begin{equation} \label{eg2}
+\begin{split}
+ F_0(jw) &= F_S(jw) \cdot F_R(jw) \\
+ &= \cfrac{V_S V_R}{j^2w^2(T_0T_1T_Rjw+T_0T_R+T_0T_1+\frac{T_0}{jw})} \\
+ &= \cfrac{V_S V_R}{-T_0T_1T_Rjw^3-T_0T_Rw^2-T_0T_1w^2+T_0jw} \\
+ &= \cfrac{V_S V_R}{w^2(-T_0T_R-T_0T_1)+j(T_0w-T_0T_1T_Rw^3)} \\
+ \end{split}
+\end{equation}
+
+\begin{equation} \label{eq3}
+  B(w) = 0 = T_0w-T_0T_1T_Rw^3 = w(T_0-T_0T_1T_Rw^2) 
+\end{equation}
+
+\begin{minipage}{.45\textwidth}
+\begin{equation}
+ w_0=0
+\end{equation}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\begin{equation} \label{eq4}
+\begin{split}
+  0 &= T_0-T_0T_1T_Rw^2 \\
+  T_0T_1T_Rw^2 &= T_0 \\
+  w^2 &= \cfrac{T_0}{T_0T_1T_R} = \cfrac{1}{T_1T_R} \\
+  w_{1,2} &= \pm \cfrac{1}{\sqrt{T_1T_R}}
+\end{split}
+\end{equation}
+\end{minipage}
+
+Da negative Werte keinen Sinn ergeben, wird $w_2$ ignoriert. Nun wird $w_1 = w_k = \cfrac{1}{\sqrt{T_1T_R}}$ in die folgende Formel eingesetzt:
+
+\begin{minipage}{.45\textwidth}
+\begin{equation} \label{k}
+  K = V_RV_S 
+\end{equation}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+ \begin{equation} \label{aw}
+  A(w) = w^2(-T_0T_R-T_0T_1)
+\end{equation}
+\end{minipage}
+
+\begin{equation} \label{eq5}
+\begin{split}
+ F_0(jw_k) &= \cfrac{K}{A(w_k)} = \cfrac{V_RV_S}{w_k^2(-T_0T_R-T_0T_1)} \\
+ &= \cfrac{V_RV_S}{(\cfrac{1}{\sqrt{T_1T_R}})^2(-T_0T_R-T_0T_1)} \\
+ &= \cfrac{V_RV_S}{(\cfrac{1}{T_1T_R})(-T_0T_R-T_0T_1)} \\
+ &= \cfrac{V_RV_S}{\cfrac{-T_0T_R}{T_1T_R}-\cfrac{T_0T_1}{T_1T_R}} = \cfrac{V_RV_S}{-\cfrac{T_0T_R-T_0T_1}{T_1T_R}} = \cfrac{V_RV_S}{-\cfrac{T_R-T_1}{T_1T_R}} = -\cfrac{V_RV_ST_1T_R}{T_0T_R+T_0T_1} \\
+ \end{split}
+\end{equation}
+
+Nach dem Nyquist Kriterium muss nun $-\cfrac{V_RV_ST_1T_R}{T_0T_R+T_0T_1} > -1$ gelten.
+
+\begin{equation} \label{eq5}
+\begin{split}
+-\cfrac{V_RV_ST_1T_R}{T_0T_R+T_0T_1} &> -1 \\
+\cfrac{V_RV_ST_1T_R}{T_0T_R+T_0T_1} &< 1 \\
+V_RV_ST_1T_R &< T_0T_R+T_0T_1 \\
+V_RV_ST_1T_R-T_0T_R &< T_0T_1 \\
+T_R(V_RV_ST_1-T_0) &< T_0T_1 \\
+T_R &< \cfrac{T_0T_1}{V_RV_ST_1-T_0} \\
+ \end{split}
+\end{equation}
